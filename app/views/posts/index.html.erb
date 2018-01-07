@@ -1,0 +1,29 @@
+<div class="full">
+<a href="https://drive.google.com/file/d/0B_4IbbkkZy61NXpXdVZqdnBJM1E/view?usp=sharing">hola</a>
+<h1>Posts</h1>
+
+
+ ">click</a>
+<%= page_entries_info @posts %>
+
+
+<hr />
+<% @posts.each do |post| %>
+  <h2><%= post.title %></h2>
+  <p>
+  <%= post.body %>
+  </p>
+<% end %>
+<hr />
+
+
+ <div class="pagination" id="posts_pagination"> 
+	<p>siguiente</p>
+	<p>anterior</p>
+ </div> 
+</div>
+
+<%= will_paginate @posts , :container => false %>
+
+
+
